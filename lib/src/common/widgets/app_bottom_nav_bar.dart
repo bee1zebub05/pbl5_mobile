@@ -12,42 +12,66 @@ class AppBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomAppBar(
-      color: const Color.fromARGB(255, 255, 250, 250),
-      shape: const CircularNotchedRectangle(),
-      notchMargin: 8,
-      child: SizedBox(
-        height: 40,
-        child: Row(
-          children: [
-            // LEFT SIDE
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _navItem(Icons.home_outlined, Icons.home, 0),
-                  _navItem(Icons.search, Icons.search, 1),
-                ],
-              ),
+    return Container(
+        padding: const EdgeInsets.fromLTRB(
+          16,20,16,30
+        ),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30)),
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 10,
+              color: Colors.black.withOpacity(0.1),
+              offset: const Offset(0, 4),
             ),
           ],
         ),
-      ),
-    );
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _navItem(Icons.location_on_outlined, "GPS Tracker", 0),
+            _navItem(Icons.remove_red_eye, "Vision Feed", 1),
+          ],
+        ),
+      );
   }
 
-  Widget _navItem(IconData icon, IconData activeIcon, int index) {
+  Widget _navItem(IconData icon, String label, int index) {
     final isSelected = currentIndex == index;
 
-    return InkWell(
+    return GestureDetector(
       onTap: () => onTap(index),
-      borderRadius: BorderRadius.circular(30),
-      child: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Icon(
-          size: 36,
-          isSelected ? activeIcon : icon,
-          color: isSelected ? const Color.fromARGB(255, 150, 110, 149) : Colors.grey,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? const Color(0xffDBEAFE) // màu xanh nhạt như hình
+              : Colors.transparent,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: SizedBox(
+          height: 60,
+          width: 120,
+          child: Column(
+            children: [
+              Icon(
+                icon,
+                size: 30,
+                color: isSelected ? const Color(0xff1E3A8A) : const Color(0xff64748B),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                label,
+                style: TextStyle(
+                  color: isSelected ? const Color(0xff1E3A8A) : const Color(0xff64748B),
+                  fontSize: 16,
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
