@@ -30,8 +30,8 @@ class AppBottomNavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            _navItem(Icons.location_on_outlined, "GPS Tracker", 0),
-            _navItem(Icons.remove_red_eye, "Vision Feed", 1),
+            _navItem(Icons.location_on_outlined, "GPS Tracker", 1),
+            _navItem(Icons.remove_red_eye, "Vision Feed", 0,)
           ],
         ),
       );
