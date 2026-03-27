@@ -11,11 +11,17 @@ class VisionFeedRepository {
 
   /// Lấy dữ liệu GPS + device
   Future<VisionStatus> getStatus() async {
-
     logger.d('trying get status at repository');
     final json = await api.fetchStatus();
 
     return VisionStatus.fromJson(json);
+  }
+
+  Future<String?> getAddressFromLatLon({
+    required double lat,
+    required double lon,
+  }) async {
+    return api.reverseGeocode(lat: lat, lon: lon);
   }
 
   /// Lấy URL stream

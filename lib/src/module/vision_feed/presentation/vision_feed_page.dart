@@ -7,14 +7,12 @@ import 'package:pbl5_mobile/src/common/widgets/text/heading_text.dart';
 import 'package:pbl5_mobile/src/module/vision_feed/components/activity_tracker.dart';
 import 'package:pbl5_mobile/src/module/vision_feed/components/camera_holder.dart';
 import 'package:pbl5_mobile/src/module/vision_feed/cubit/vision_feed_cubit.dart';
+import 'package:pbl5_mobile/src/module/vision_feed/cubit/vision_feed_state.dart';
 
 class VisionFeedPage extends StatelessWidget {
   const VisionFeedPage({super.key});
 
-  static const wearer = WearerInfo(
-    name: 'Thanh Cat\nTu Han',
-    location: 'Kinh Chau\nTrung Quoc',
-  );
+  static const wearerName = 'Thanh Cat\nTu Han';
 
   static const stats = [
     StatItem(
@@ -57,15 +55,41 @@ class VisionFeedPage extends StatelessWidget {
         
         body: SafeArea(
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                CameraHolder(),
-                ActivityTrackerCard(wearer: wearer, stats: stats),
-              ],
+            child: BlocBuilder<VisionFeedCubit, VisionFeedState>(
+              builder: (context, state) {
+                final wearer = WearerInfo(
+                  name: wearerName,
+                  location: _compactLocation(state.location),
+                );
+
+                return Column(
+                  children: [
+                    CameraHolder(),
+                    ActivityTrackerCard(wearer: wearer, stats: stats),
+                  ],
+                );
+              },
             ),
           ),
         ),
       ),
     );
+  }
+
+  static String _compactLocation(String location) {
+    final trimmed = location.trim();
+    if (trimmed.isEmpty) return '-';
+
+    final parts = trimmed
+        .split(',')
+        .map((e) => e.trim())
+        .where((e) => e.isNotEmpty)
+        .toList();
+
+    if (parts.length >= 2) {
+      return '${parts[0]}\n${parts[1]}';
+    }
+
+    return trimmed;
   }
 }

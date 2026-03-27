@@ -30,6 +30,8 @@ dependencies:
   flutter_vlc_player: ^7.4.4
   equatable: ^2.0.8
   flutter_screenutil: ^5.9.3
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
 
 dev_dependencies:
   flutter_test:

@@ -75,22 +75,25 @@ class _WearerHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ParagraphText(
-              text: 'ACTIVE WEARER',
-              color: ColorName.lightBlack,
-              letterSpacing: 1.2.w,
-            ),
-            ParagraphText(
-              text: wearer.name,
-              color: ColorName.black,
-              fontWeight: FontWeight.bold,
-              size: 24.sp,
-            ),
-          ],
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ParagraphText(
+                text: 'ACTIVE WEARER',
+                color: ColorName.lightBlack,
+                letterSpacing: 1.2.w,
+              ),
+              ParagraphText(
+                text: wearer.name,
+                color: ColorName.black,
+                fontWeight: FontWeight.bold,
+                size: 24.sp,
+              ),
+            ],
+          ),
         ),
+        SizedBox(width: 12.w),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
@@ -99,12 +102,20 @@ class _WearerHeader extends StatelessWidget {
               color: ColorName.black,
               letterSpacing: 1.2.w,
             ),
-            ParagraphText(
-              text: wearer.location,
-              color: ColorName.black,
-              fontWeight: FontWeight.bold,
-              size: 24.sp,
-              textAlign: TextAlign.right,
+            SizedBox(
+              width: 150.w,
+              child: Text(
+                wearer.location,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  color: ColorName.black,
+                  fontFamily: 'Inter',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24.sp,
+                ),
+              ),
             ),
           ],
         ),
