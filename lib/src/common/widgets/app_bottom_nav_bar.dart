@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pbl5_mobile/generated/colors.gen.dart';
+import 'package:pbl5_mobile/src/common/widgets/text/paragrahp_text.dart';
 
 class AppBottomNavBar extends StatelessWidget {
   final int currentIndex;
@@ -13,28 +15,29 @@ class AppBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.fromLTRB(
-          16,20,16,30
+      padding: const EdgeInsets.fromLTRB(16, 20, 16, 30),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(30),
+          topLeft: Radius.circular(30),
         ),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(topRight: Radius.circular(30),topLeft: Radius.circular(30)),
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 10,
-              color: Colors.black.withOpacity(0.1),
-              offset: const Offset(0, 4),
-            ),
-          ],
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _navItem(Icons.location_on_outlined, "GPS Tracker", 1),
-            _navItem(Icons.remove_red_eye, "Vision Feed", 0,)
-          ],
-        ),
-      );
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 10,
+            color: Colors.black.withOpacity(0.1),
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _navItem(Icons.location_on_outlined, "GPS Tracker", 1),
+          _navItem(Icons.remove_red_eye, "Vision Feed", 0),
+        ],
+      ),
+    );
   }
 
   Widget _navItem(IconData icon, String label, int index) {
@@ -59,16 +62,13 @@ class AppBottomNavBar extends StatelessWidget {
               Icon(
                 icon,
                 size: 30,
-                color: isSelected ? const Color(0xff1E3A8A) : const Color(0xff64748B),
+                color: isSelected ? ColorName.primary : ColorName.muted,
               ),
               const SizedBox(width: 8),
-              Text(
-                label,
-                style: TextStyle(
-                  color: isSelected ? const Color(0xff1E3A8A) : const Color(0xff64748B),
-                  fontSize: 16,
-                  fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                ),
+              ParagraphText(
+                text: label,
+                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                color: isSelected ? ColorName.primary : ColorName.muted,
               ),
             ],
           ),

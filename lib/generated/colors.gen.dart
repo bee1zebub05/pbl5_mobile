@@ -14,6 +14,9 @@ import 'package:flutter/material.dart';
 class ColorName {
   ColorName._();
 
+  /// Color: #191C1D
+  static const Color black = Color(0xFF191C1D);
+
   /// Color: #004B87
   static const Color buttonBlue = Color(0xFF004B87);
 
@@ -47,8 +50,11 @@ class ColorName {
   /// Color: #E7E8E9
   static const Color labelSecondary = Color(0xFFE7E8E9);
 
-  /// Color: #FFA46A
-  static const Color muted = Color(0xFFFFA46A);
+  /// Color: #424750
+  static const Color lightBlack = Color(0xFF424750);
+
+  /// Color: #64748B
+  static const Color muted = Color(0xFF64748B);
 
   /// Color: #F8F9FA
   static const Color neutral = Color(0xFFF8F9FA);
