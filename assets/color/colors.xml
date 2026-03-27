@@ -1,52 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#9694FF</color>
 
-    <color name="whiteFE">#FEFEFE</color>
+    <color name="primary">#004B87</color>
+    <color name="secondary">#455A64</color>
+    <color name="tertiary">#793701</color>
+    <color name="neutral">#F8F9FA</color>
+
+    <color name="buttonBrown">#793701</color>
+    <color name="buttonBlue">#004B87</color>
+
+    <color name="chipBlue">#003461</color>
+    <color name="chipGray">#4C616C</color>
+    <color name="chipBrown">#572500</color>
+    <color name="chipRed">#BA1A1A</color>
+
+    <color name="labelPrimary">#003461</color>
+    <color name="labelSecondary">#E7E8E9</color>
+    <color name="labelInverted">#2E3132</color>
+    <color name="labelOutlined">#EDEEEF</color>
+
     <color name="white">#FFFFFF</color>
-
-    <color name="black07">#070707</color>
-    <color name="black">#000000</color>
-
-    <color name="purple969">#9694FF</color>
-
-    <color name="blue2C3">#2C3D7A</color>
-    <color name="blue57C">#57CAEB</color>
-    <color name="blueF2F">#F2F7FF</color>
-
-    <color name="grayC4">#C4C4C4</color>
-    <color name="grayBC">#BCBCD3</color>
-    <color name="gray97">#979797</color>
-
-    <color name="redFF7">#FF7976</color>
-   
-    <color name="redFile">#FF5562</color>
-    <color name="blueFile">#4881EF</color>
-    <color name="orangeFile">#FF8E27</color>
-    <color name="greenFile">#2BB6A9</color>
-    <color name="yellowFile">#FFC107</color>
-
-    <color name="darkBg">#0F0F1E</color>
-    <color name="cardBg">#1A1A2E</color>
-
-
-    <color name="buttonBlue">#546AFE</color>
-    
-    <color name="grayIcon">#858F9D</color>
-    <color name="grayIcon_v2">#748090</color>
-    <color name="blueIcon">#5269FF</color>
-    <color name="milkIcon">#F0F4FF</color>
-    
-    <color name="grayText">#B1B7BE</color>
-    <color name="lightText">#FAFAFA</color>
-    <color name="mutedText">#B0B0B0</color>
-
-    <color name="grayTextBackGround">#A6AFBC</color>
-
-
-    <color name="primaryGradientStart">#FF6B9D</color>
-    <color name="primaryGradientEnd">#FF6B9D</color>
-    <color name="accentColor">#FFD700</color>
-    <color name="primaryGradientStart">#FFD700</color>
+    <color name="gray">#E7E8E9</color>
+    <color name="muted">#FFA46A</color>
     
 </resources> 
