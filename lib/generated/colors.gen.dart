@@ -14,99 +14,54 @@ import 'package:flutter/material.dart';
 class ColorName {
   ColorName._();
 
-  /// Color: #FFD700
-  static const Color accentColor = Color(0xFFFFD700);
+  /// Color: #004B87
+  static const Color buttonBlue = Color(0xFF004B87);
 
-  /// Color: #000000
-  static const Color black = Color(0xFF000000);
+  /// Color: #793701
+  static const Color buttonBrown = Color(0xFF793701);
 
-  /// Color: #070707
-  static const Color black07 = Color(0xFF070707);
+  /// Color: #003461
+  static const Color chipBlue = Color(0xFF003461);
 
-  /// Color: #2C3D7A
-  static const Color blue2C3 = Color(0xFF2C3D7A);
+  /// Color: #572500
+  static const Color chipBrown = Color(0xFF572500);
 
-  /// Color: #57CAEB
-  static const Color blue57C = Color(0xFF57CAEB);
+  /// Color: #4C616C
+  static const Color chipGray = Color(0xFF4C616C);
 
-  /// Color: #F2F7FF
-  static const Color blueF2F = Color(0xFFF2F7FF);
+  /// Color: #BA1A1A
+  static const Color chipRed = Color(0xFFBA1A1A);
 
-  /// Color: #4881EF
-  static const Color blueFile = Color(0xFF4881EF);
+  /// Color: #E7E8E9
+  static const Color gray = Color(0xFFE7E8E9);
 
-  /// Color: #5269FF
-  static const Color blueIcon = Color(0xFF5269FF);
+  /// Color: #2E3132
+  static const Color labelInverted = Color(0xFF2E3132);
 
-  /// Color: #546AFE
-  static const Color buttonBlue = Color(0xFF546AFE);
+  /// Color: #EDEEEF
+  static const Color labelOutlined = Color(0xFFEDEEEF);
 
-  /// Color: #1A1A2E
-  static const Color cardBg = Color(0xFF1A1A2E);
+  /// Color: #003461
+  static const Color labelPrimary = Color(0xFF003461);
 
-  /// Color: #0F0F1E
-  static const Color darkBg = Color(0xFF0F0F1E);
+  /// Color: #E7E8E9
+  static const Color labelSecondary = Color(0xFFE7E8E9);
 
-  /// Color: #979797
-  static const Color gray97 = Color(0xFF979797);
+  /// Color: #FFA46A
+  static const Color muted = Color(0xFFFFA46A);
 
-  /// Color: #BCBCD3
-  static const Color grayBC = Color(0xFFBCBCD3);
+  /// Color: #F8F9FA
+  static const Color neutral = Color(0xFFF8F9FA);
 
-  /// Color: #C4C4C4
-  static const Color grayC4 = Color(0xFFC4C4C4);
+  /// Color: #004B87
+  static const Color primary = Color(0xFF004B87);
 
-  /// Color: #858F9D
-  static const Color grayIcon = Color(0xFF858F9D);
+  /// Color: #455A64
+  static const Color secondary = Color(0xFF455A64);
 
-  /// Color: #748090
-  static const Color grayIconV2 = Color(0xFF748090);
-
-  /// Color: #B1B7BE
-  static const Color grayText = Color(0xFFB1B7BE);
-
-  /// Color: #A6AFBC
-  static const Color grayTextBackGround = Color(0xFFA6AFBC);
-
-  /// Color: #2BB6A9
-  static const Color greenFile = Color(0xFF2BB6A9);
-
-  /// Color: #FAFAFA
-  static const Color lightText = Color(0xFFFAFAFA);
-
-  /// Color: #F0F4FF
-  static const Color milkIcon = Color(0xFFF0F4FF);
-
-  /// Color: #B0B0B0
-  static const Color mutedText = Color(0xFFB0B0B0);
-
-  /// Color: #FF8E27
-  static const Color orangeFile = Color(0xFFFF8E27);
-
-  /// Color: #9694FF
-  static const Color primary = Color(0xFF9694FF);
-
-  /// Color: #FF6B9D
-  static const Color primaryGradientEnd = Color(0xFFFF6B9D);
-
-  /// Color: #FF6B9D
-  static const Color primaryGradientStart = Color(0xFFFF6B9D);
-
-  /// Color: #9694FF
-  static const Color purple969 = Color(0xFF9694FF);
-
-  /// Color: #FF7976
-  static const Color redFF7 = Color(0xFFFF7976);
-
-  /// Color: #FF5562
-  static const Color redFile = Color(0xFFFF5562);
+  /// Color: #793701
+  static const Color tertiary = Color(0xFF793701);
 
   /// Color: #FFFFFF
   static const Color white = Color(0xFFFFFFFF);
-
-  /// Color: #FEFEFE
-  static const Color whiteFE = Color(0xFFFEFEFE);
-
-  /// Color: #FFC107
-  static const Color yellowFile = Color(0xFFFFC107);
 }
