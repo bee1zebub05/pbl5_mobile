@@ -21,6 +21,7 @@
 
     <color name="white">#FFFFFF</color>
     <color name="gray">#E7E8E9</color>
-    <color name="muted">#FFA46A</color>
-    
+    <color name="muted">#64748B</color>
+    <color name="light_black">#424750</color>
+    <color name="black">#191C1D</color>
 </resources> 

@@ -1,4 +1,5 @@
 import 'package:injectable/injectable.dart';
+import 'package:pbl5_mobile/src/common/utils/logger.dart';
 import 'package:pbl5_mobile/src/module/vision_feed/api/vision_feed_api.dart';
 import 'package:pbl5_mobile/src/module/vision_feed/model/vision_status.dart';
 
@@ -10,6 +11,8 @@ class VisionFeedRepository {
 
   /// Lấy dữ liệu GPS + device
   Future<VisionStatus> getStatus() async {
+
+    logger.d('trying get status at repository');
     final json = await api.fetchStatus();
 
     return VisionStatus.fromJson(json);
@@ -17,6 +20,7 @@ class VisionFeedRepository {
 
   /// Lấy URL stream
   String getStreamUrl() {
+    logger.d('trying get stream url at repository');
     return api.getStreamUrl();
   }
 }

@@ -19,6 +19,7 @@ class VisionFeedApi {
 
   /// URL stream (dùng trực tiếp cho Image widget)
   String getStreamUrl() {
+    
     return '$baseUrl/stream';
   }
 }
